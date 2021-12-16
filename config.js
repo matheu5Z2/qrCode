@@ -12,7 +12,7 @@ sequelize.authenticate().then(function() {
     console.log('Erro ao realizar a conexão com BD: ' + err)
 });
 
-/* Criando Banco de Dados */
+/* Criando Tabela do Banco de Dados */
 const veiculo = sequelize.define('veiculos', {
     marca: {
         type: Sequelize.STRING

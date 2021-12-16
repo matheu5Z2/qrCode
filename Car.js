@@ -20,13 +20,13 @@ export default ({ navigation }) => {
   const [obra, setObra] = useState();
   const [status, setStats] = useState();
   const generateQr = () => {
-    // if (!marca || !modelo || !placa || !condutor || !obra || !status) {
-    //   Alert.alert(
-    //     "Erro!",
-    //     "Preencha todas as informações para gerar o QrCode."
-    //   );
-    //   return false;
-    // }
+    if (!marca || !modelo || !placa || !condutor || !obra || !status) {
+      Alert.alert(
+        "Erro!",
+        "Preencha todas as informações para gerar o QrCode."
+      );
+    return false;
+    }
     const metadata = {
       marca,
       modelo,
